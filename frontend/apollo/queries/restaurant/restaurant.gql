@@ -1,0 +1,15 @@
+query Restaurant($slug: String!) {
+  restaurants(where: {slug: $slug}) {
+    id
+    name
+    dishes {
+      id
+      name
+      description
+      price
+      image {
+        url
+      }
+    }
+  }
+}
